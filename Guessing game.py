@@ -49,7 +49,16 @@ def main():
 
 
 def starting_screen(number_of_attempts, max_number):
-    # Generate an introduction
+    """ Generate an introduction.
+
+    Args:
+        number_of_attempts: A number of tries to guess the number.
+        max_number: Maximum value of randomized number.
+
+    Returns:
+        A print statement: starting screen, introduction & rules.
+    """
+
     print("-----------------------------------------")
     print("     Welcome to the Guessing Game!")
     print("-----------------------------------------")
