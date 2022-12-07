@@ -4,12 +4,18 @@ import random
 def main():
     max_number = 100
     rnd_number = random.randint(1, max_number)
-    number_of_attempts = 10
+    print(rnd_number)
+    number_of_attempts = 5
     attempt = 0
 
     starting_screen(number_of_attempts, max_number)
 
     while attempt < number_of_attempts:
+        if number_of_attempts == attempt:
+            print()
+            print("You loose! You're out of attempts.")
+            break
+
         guess = input("What is your guess? ")
         try:
             guess = int(guess)
@@ -24,7 +30,6 @@ def main():
             continue
         else:
             attempt += 1
-
             if rnd_number == guess and attempt == 1:
                 print(f"Congratulations! It was {rnd_number}! It took you 1 attempt!")
                 print('')
@@ -40,10 +45,6 @@ def main():
 
         print(f'Attempts remaining: {number_of_attempts - attempt}')
         print('')
-
-    if number_of_attempts == attempt:
-        print()
-        print("You loose! You're out of attempts.")
 
     print("Thank you for playing!")
 
