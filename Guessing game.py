@@ -4,7 +4,6 @@ import random
 def main():
     max_number = 100
     rnd_number = random.randint(1, max_number)
-    print(rnd_number)
     number_of_attempts = 5
     attempt = 0
 
